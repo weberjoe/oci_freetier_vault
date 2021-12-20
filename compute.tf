@@ -52,7 +52,7 @@ resource "null_resource" "remote-exec" {
   }
   # copy install script
   provisioner "file" {
-    source      = "script.sh"
+    source      = "assets/script.sh"
     destination = "/tmp/script.sh"
   }
   # copy data
@@ -62,7 +62,7 @@ resource "null_resource" "remote-exec" {
   }
   # python demo
   provisioner "file" {
-    source      = "vault_crypt_demo.py"
+    source      = "assets/vault_crypt_demo.py"
     destination = "/tmp/vault_crypt_demo.py"
   }
   # execute install script

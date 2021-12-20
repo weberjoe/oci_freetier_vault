@@ -9,3 +9,5 @@ keys/
 **/.terraform/*
 
 notes.md
+
+.DS_Store
