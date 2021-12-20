@@ -1,0 +1,14 @@
+plaintext=$(echo "Hey Joe" | base64)
+echo $plaintext | base64 --decode
+
+KEY_ID=ocid1.key.oc1.eu-frankfurt-1.b5q3wzeoaafak.abtheljsafowwedxpceyopl5uzyugb66wsjkps4skf5nbg2xoa5kmzpocx6q
+ENDPOINT=https://b5q3wzeoaafak-crypto.kms.eu-frankfurt-1.oraclecloud.com
+
+encryptedtext=$(oci kms crypto encrypt --plaintext $plaintext --key-id $KEY_ID --endpoint $ENDPOINT --auth instance_principal)
+echo $encryptedtext
+
+cipher=QaFQoLU0yrSQcbJ0O3oVFZvGqyPxC79xNMNbZvhbbx7AjBl0tEcgMS4Nv4ul
+decryptedtext=$(oci kms crypto decrypt --ciphertext $cipher --key-id $KEY_ID --endpoint $ENDPOINT --auth instance_principal)
+
+echo $decryptedtext
+echo SGV5IEpvZQo= | base64 --decode
