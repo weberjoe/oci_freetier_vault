@@ -1,4 +1,4 @@
-# Keyvault en/de-crypt demo in OCI
+# OCI key-vault en/de-crypt demo
 
 ### keywords
   - OCI keyvault, masterkey (encrypt, decrypt)
