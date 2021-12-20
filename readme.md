@@ -1,14 +1,11 @@
 # Keyvault en/de-crypt demo in OCI
 
 ### keywords
-- OCI keyvault, masterkey
-  - encrypt, decrypt
-- OCI cli 
-  - python sdk  
-- OCI instance principals
-  - for compute instance
-- OCI FreeTier
-- Terraform
+  - OCI keyvault, masterkey (encrypt, decrypt)
+  - OCI cli & python sdk  
+  - OCI instance principals for compute instance
+  - OCI FreeTier
+  - Terraform
 
 ### setup
 **activate OCI environment variables**
